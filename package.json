@@ -29,8 +29,8 @@
     "vite": "^5.4.0"
   },
   "description": "A slick Netflix-style UI using TailwindCSS. It uses your own movie list in `src/data/movies.js`. Each movie can have a Terabox link. If the link is empty, the Watch button is disabled.",
-  "main": "postcss.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  }
 }
