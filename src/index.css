@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fancy scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6b7280 transparent;
+}
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: linear-gradient(180deg, rgba(99,102,241,.8), rgba(236,72,153,.8));
+}
+
+/* Reusable utilities */
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition;
+  }
+  .btn-primary {
+    @apply btn text-white bg-gradient-to-r from-indigo-500 to-pink-500 hover:opacity-90 shadow-glow;
+  }
+  .card {
+    @apply rounded-2xl overflow-hidden glass shadow-md transition transform;
+  }
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-glow;
+  }
+}
